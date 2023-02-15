@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: "Nunito", sans-serif;
+}
+
+:root {
+    --bg-dark: #1e1e1e;
+
+    --zinc-800: #27272a;
+    --zinc-900: #18181b;
+
+    --blue-500: #3b82f6;
+
+    --green-500: #22c55e;
+    
+    --yellow-400: #fbbf24;
+
+    --red-600: #dc2626;
+
+    --violet-400: #a78bfa;
+    --violet-500: #8b5cf6;
+
+    --shadow-md: rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: #fff;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+
+#modal {
+    opacity: 0;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background-color: rgba(0, 0, 0, 0.192);
+}
+
+#modal:target {
+    opacity: 1;
+    z-index: 1;
+}
+
+#modal div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: var(--zinc-800);
+    border-radius: 8px;
+
+    padding: 16px;
+    position: relative;
+    border: 1px solid var(--yellow-400); 
+    
+}
+
+#modal .sucess {
+    color: var(--green-500);
+}
+
+#modal .error {
+    color: var(--red-600);
+}
+
+#modal div a {
+    color: var(--zinc-900);
+
+    top: -8px;
+    right: -8px;
+    position: absolute;
+
+    background-color: var(--zinc-800);
+    border-radius: 6px;
+}
+

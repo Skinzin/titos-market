@@ -1,0 +1,104 @@
+.container {
+    display: flex;
+    height: 100vh;
+
+    position: relative;
+}
+
+form {
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+    justify-content: center;
+
+    max-width: 22rem;
+    border-radius: 0 16px 0 0;
+
+    padding: 0 1.2rem 0 1.2rem;
+
+    background-color: var(--zinc-900);
+}
+
+
+img {
+    display: flex;
+    margin: auto;
+}
+
+.container table {
+    width: 100%;
+    height: min-content;
+    text-align: center;
+}
+/* Label Float */
+
+.labelFloat {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+
+    position: relative;
+}
+
+.labelFloat label {
+    top: -10%;
+    position: absolute;
+    transition: .3s;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.labelFloat input:focus + label,
+.labelFloat input:not(:placeholder-shown) + label {
+    top: -18px;
+    font-size: 14px;
+}
+
+
+input {
+    border: none;
+    outline: none;
+    border-bottom: 2px solid var(--zinc-800);
+
+    background-color: transparent;
+
+    color: white;
+
+    font-size: 18px;
+}
+
+input:focus {
+    border-color: var(--blue-500);
+}
+
+input:not(:focus):valid {
+    border-color: var(--green-500);
+}
+
+
+input[type=checkbox] + label {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+button {
+    border: none;
+    background-color: var(--violet-400);
+
+    padding: 12px;
+    border-radius: 6px;
+    color: white;
+
+    transition: .2s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--violet-500);
+
+    box-shadow: var(--shadow-md);
+}
